@@ -11,6 +11,7 @@
       $this->load->model('api/gettrip');
     }
 
+    // Index Page of User's Dashboard
     function index()
     {
       // url:index.php/api/gettrip/index/pagenum/limit/apikey/apisecret
@@ -21,6 +22,15 @@
       $this->load->view('api/api_dashboard', $data);
     }
 
+    // View Detailed Page
+    function trip()
+    {
+      // url:index.php/api/gettrip/detail/unique_id/apikey/apisecret
+
+      
+    }
+
+    // AJAX to Add Trip
     function addtrip()
     {
       $data         = $this->gettrip->getLastTrip();

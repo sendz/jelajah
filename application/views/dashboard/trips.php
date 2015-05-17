@@ -8,7 +8,7 @@
           <div class="nav-wrapper">
             <form>
               <div class="input-field">
-                <input id="search" type="search" required placeholder="Find your trip" ng-model="findTrip">
+                <input id="search" type="search" required placeholder="Find Your Trip" ng-model="findTrip">
                 <label for="search"><i class="mdi-action-search"></i></label>
                 <i class="mdi-navigation-close"></i>
               </div>
