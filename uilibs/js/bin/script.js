@@ -1,3 +1,7 @@
+// Initialize
+var base_url = 'http://localhost/jelajah/';
+var index_page = 'index.php';
+
 $(document).ready(function(){
 	// the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
 	$('.modal-trigger').leanModal();
@@ -5,6 +9,22 @@ $(document).ready(function(){
 	$('.button-collapse').sideNav();
 	$('.dropdown-button').dropdown();
 	$('select').material_select();
+
+	// Add Flight
+	$('#form-add-trip').on('submit', function(event) {
+		event.preventDefault();
+			//alert("Ready to submit");
+			data = $(this).serialize();
+
+			$.ajax({
+				  type: "POST"
+				, url: base_url + index_page + "/api/dashboard/addtrip"
+				, data: data
+			}).done(function(msg){
+				$('#form-add-trip')[0].reset();
+				$('#add-trip').closeModal();
+			});
+	});
 });
 	function deleteThisThing(id)
 	{
@@ -16,7 +36,7 @@ $(document).ready(function(){
 	{
 		$('#add-trip').openModal();
 	}
-	
+
 	function deleteThisItem(id)
 	{
 		window.location = "port/delete/"+id;

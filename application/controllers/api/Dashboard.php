@@ -21,8 +21,22 @@
       $this->load->view('api/api_dashboard', $data);
     }
 
-    function addTrip()
+    function addtrip()
     {
-      $unique_id    = '';
+      $data         = $this->gettrip->getLastTrip();
+      foreach ($data as $data) {
+        $id = $data->id + 1;
+      }
+      $unique          = $id.="TEST";#$_POST['add-trip-title'];
+      $unique_id          = base64_encode($unique);
+      #$owner              = base64_encode($_SESSION['username']);
+      $data = array(
+          'title'         => $_POST['add-trip-title']
+        , 'description'   => $_POST['add-trip-description']
+        , 'unique'        => $unique_id
+        #, 'owner'        => $owner
+      );
+      $this->db->insert('trip',$data);
+      echo "Data Submitted";
     }
   }

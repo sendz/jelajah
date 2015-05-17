@@ -29,8 +29,12 @@
               </p>
             </div>
             <div class="card-action">
-              <a href="#"></a>
-              <a href="#{{trip.unique_id}}" class="right">View</a>
+              <a href="#" class="btn-flat waves-effect waves-light dropdown-button" data-activates="dropdown-{{trip.unique_id}}"><i class="mdi-navigation-more-vert left"></i></a>
+              <ul id="dropdown-{{trip.unique_id}}">
+                <li><a href="#edit/{{trip.unique_id}}">Edit</a></li>
+                <li><a href="#delete/{{trip.unique_id}}">Delete</a></li>
+              </ul>
+              <a href="#{{trip.unique_id}}" class="btn-flat waves-effect waves-light right">View</a>
             </div>
           </div>
         </div>
@@ -40,6 +44,13 @@
 </main>
 
 <div id="add-trip" class="modal">
+      <?php
+        $form_attribute = array(
+            'class' => 'form'
+          , 'id'    => 'form-add-trip'
+        );
+        echo form_open('',$form_attribute);
+      ?>
   <div class="modal-content">
     <div class="row">
       <div class="col s12">
@@ -71,6 +82,9 @@
     </div>
   </div>
   <div class="modal-footer">
-    <button type="button" name="button-submit-trip" class="btn-flat waves-effect waves-light" onClick="submitTrip()"><i class="mdi-content-send right"></i>Add Trip</button>
+    <div class="col s12">
+      <button type="submit" name="button-submit-trip" class="btn-flat waves-effect waves-light"><i class="mdi-content-send right"></i>Add Trip</button>
+    </div>
   </div>
+    <?php echo form_close(); ?>
 </div>
