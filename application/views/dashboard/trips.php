@@ -29,12 +29,8 @@
               </p>
             </div>
             <div class="card-action">
-              <a href="#" class="btn-flat waves-effect waves-light dropdown-button" data-activates="dropdown-{{trip.unique_id}}"><i class="mdi-navigation-more-vert left"></i></a>
-              <ul id="dropdown-{{trip.unique_id}}">
-                <li><a href="#edit/{{trip.unique_id}}">Edit</a></li>
-                <li><a href="#delete/{{trip.unique_id}}">Delete</a></li>
-              </ul>
-              <a href="#{{trip.unique_id}}" class="btn-flat waves-effect waves-light right">View</a>
+              <a href="#"></a>
+              <a href="#{{trip.unique_id}}" class="right">View</a>
             </div>
           </div>
         </div>
