@@ -23,6 +23,6 @@
 
     function addTrip()
     {
-      $unique_id    = 
+      $unique_id    = '';
     }
   }
