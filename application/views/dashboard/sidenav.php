@@ -14,7 +14,7 @@
             </object>
           </a>
         </li>
-        <li class="<?php if ($link_active=='index') echo 'active';?>"><a href="#"><i class="mdi-maps-flight left"></i>Your Trip</a></li>
+        <li class="<?php if ($link_active=='trip') echo 'active';?>"><a href="#"><i class="mdi-maps-flight left"></i>Your Trip</a></li>
         <li class=""><a href="#"><i class="mdi-social-person left"></i>Your Profile</a></li>
         <li class="divider"></li>
         <li><a href="#"><i class="mdi-navigation-close left"></i>Sign Out</a></li>
@@ -23,10 +23,10 @@
 	</div>
 </nav>
 <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
-  <a <?php if ($link_active=='index') echo "onClick='addTrip()'"; ?> class="btn-floating btn-large red">
+  <a <?php if ($link_active=='trip') echo "onClick='addTrip()'"; ?> class="btn-floating btn-large red">
     <i class="large mdi-content-add"></i>
   </a>
-  <?php if ($link_active!='index'): ?>
+  <?php if ($link_active!='trip'): ?>
   <ul>
     <li><a class="btn-floating red" href="<?php echo base_url() . index_page(); ?>/control-panel/port/add/airport"><i class="large mdi-maps-local-airport"></i></a></li>
     <li><a class="btn-floating yellow darken-1" href="<?php echo base_url() . index_page(); ?>/control-panel/port/add/railstation"><i class="large mdi-maps-directions-train"></i></a></li>

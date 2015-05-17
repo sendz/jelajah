@@ -2,7 +2,7 @@
   /**
    * Class for Index
    */
-  class Index extends CI_Controller
+  class Trip extends CI_Controller
   {
 
     function __construct()
@@ -14,7 +14,15 @@
     {
       $this->load->view('dashboard/head');
       $this->load->view('dashboard/sidenav');
-      $this->load->view('dashboard/trips');
+      $this->load->view('dashboard/trips'); // Trips contain all trip
+      $this->load->view('dashboard/foot');
+    }
+
+    function detail()
+    {
+      $this->load->view('dashboard/head');
+      $this->load->view('dashboard/sidenav');
+      $this->load->view('dashboard/trip'); // Trip contain just trip detail
       $this->load->view('dashboard/foot');
     }
   }
