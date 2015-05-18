@@ -8,3 +8,4 @@ Project for Jelajah
 | - Dashboard       | - API Auth          |       |
 | | - Itinerary Detail | |
 | | Collaboration | |
+| | User management | |
