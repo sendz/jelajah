@@ -9,6 +9,15 @@ $(document).ready(function(){
 	$('.button-collapse').sideNav();
 	$('.dropdown-button').dropdown();
 	$('select').material_select();
+	$('.collapsible').collapsible({
+    accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+  });
+	$('.tooltipped').tooltip({delay: 50});
+	$('.datepicker').pickadate({
+		  selectMonths	: true
+		, selectYears		: 5
+	});
+	$('.timepicker').pickatime();
 
 	// Add Flight
 	$('#form-add-trip').on('submit', function(event) {
@@ -18,13 +27,18 @@ $(document).ready(function(){
 
 			$.ajax({
 				  type: "POST"
-				, url: base_url + index_page + "/api/dashboard/addtrip"
+				, url: base_url + index_page + "/api/trip/addtrip"
 				, data: data
 			}).done(function(msg){
 				$('#form-add-trip')[0].reset();
 				$('#add-trip').closeModal();
+				Materialize.toast('New trip successfuly added',3000);
+				setTimeout(function(){
+					location.reload();
+				},3500);
 			});
 	});
+
 });
 	function deleteThisThing(id)
 	{

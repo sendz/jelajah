@@ -2,7 +2,7 @@
   /**
    * Class for generate JSON of dashboard
    */
-  class Dashboard extends CI_Controller
+  class Trip extends CI_Controller
   {
 
     function __construct()
@@ -14,7 +14,7 @@
     // Index Page of User's Dashboard
     function index()
     {
-      // url:index.php/api/gettrip/index/pagenum/limit/apikey/apisecret
+      // url:index.php/api/trip/index/pagenum/limit/apikey/apisecret
       $limit      = $this->uri->segment(5);
       $pagenum    = $this->uri->segment(4);
 
@@ -22,12 +22,20 @@
       $this->load->view('api/api_dashboard', $data);
     }
 
+    function detail()
+    {
+      // url:index.php/api/trip/detail/unique/apikey/apisecret
+      $unique = $this->uri->segment(4);
+      $data['tripdetail']   = $this->gettrip->detail($unique);
+      $this->load->view('api/api_detail',$data);
+    }
+
     // View Detailed Page
     function trip()
     {
       // url:index.php/api/gettrip/detail/unique_id/apikey/apisecret
 
-      
+
     }
 
     // AJAX to Add Trip

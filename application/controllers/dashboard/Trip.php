@@ -25,6 +25,14 @@
       $this->load->view('dashboard/trip'); // Trip contain just trip detail
       $this->load->view('dashboard/foot');
     }
+
+    function add()
+    {
+      $this->load->view('dashboard/head');
+      $this->load->view('dashboard/sidenav');
+      $this->load->view('dashboard/addtrip');
+      $this->load->view('dashboard/foot');
+    }
   }
 
 ?>

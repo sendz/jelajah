@@ -18,6 +18,12 @@
       return $query->result();
     }
 
+    function detail($unique)
+    {
+      $query    = $this->db->get_where('trip',array('unique'=>$unique));
+      return $query->result();
+    }
+
     function getLastTrip()
     {
       #$this->db->order_by('id','DESC');

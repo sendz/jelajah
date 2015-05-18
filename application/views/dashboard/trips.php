@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col s12">
-        <h3>Your Trip</h3>
+        <h3>Your Trips</h3>
         <!-- Search Bar -->
         <nav>
           <div class="nav-wrapper">
@@ -30,7 +30,7 @@
             </div>
             <div class="card-action">
               <a href="#"></a>
-              <a href="#{{trip.unique_id}}" class="right">View</a>
+              <a href="<?php echo base_url() . index_page(); ?>/dashboard/trip/detail/{{trip.unique_id}}" class="right">View</a>
             </div>
           </div>
         </div>
