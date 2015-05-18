@@ -6,4 +6,5 @@ Project for Jelajah
 |:------------------|:--------------------|:------|
 | API               | API                 |       |
 | - Dashboard       | - API Auth          |       |
-|-------------------|---------------------|-------|
+| | - Itinerary Detail | |
+| | Collaboration | |
