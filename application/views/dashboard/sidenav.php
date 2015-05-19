@@ -15,7 +15,7 @@
             </object>
           </a>
         </li>
-        <li class="<?php if ($sidenav_active=="trip") echo "active";?>"><a href="#"><i class="mdi-maps-flight left"></i>Your Trip</a></li>
+        <li class="<?php if ($sidenav_active=="trip") echo "active";?>"><a href="<?php echo base_url() . index_page();?>/dashboard/trip"><i class="mdi-maps-flight left"></i>Your Trip</a></li>
         <li class=""><a href="#"><i class="mdi-social-person left"></i>Your Profile</a></li>
         <li class="divider"></li>
         <li><a href="#"><i class="mdi-navigation-close left"></i>Sign Out</a></li>
