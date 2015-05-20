@@ -29,8 +29,8 @@
               </p>
             </div>
             <div class="card-action">
-              <a href="#"></a>
-              <a href="<?php echo base_url() . index_page(); ?>/dashboard/trip/detail/{{trip.unique_id}}" class="right">View</a>
+              <a href="#" class=""></a>
+              <a href="<?php echo base_url() . index_page(); ?>/dashboard/trip/detail/{{trip.unique_id}}" class="">View</a>
             </div>
           </div>
         </div>

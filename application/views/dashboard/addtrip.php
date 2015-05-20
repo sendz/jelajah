@@ -8,9 +8,10 @@
       <?php
         echo form_label('Departure','add-detail-departure');
         $add_detail_departure = array(
-            'id'    => 'add-detail-departure'
-          , 'name'  => 'add-detail-departure'
-          , 'type'  => 'text'
+            'id'        => 'add-detail-departure'
+          , 'name'      => 'add-detail-departure'
+          , 'type'      => 'text'
+          , 'ng-model'  => 'AirportKeyword'
         );
         echo form_input($add_detail_departure);
       ?>

@@ -41,13 +41,13 @@
     // AJAX to Add Trip
     function addtrip()
     {
-      $data         = $this->gettrip->getLastTrip();
+      $data               = $this->gettrip->getLastTrip();
       foreach ($data as $data) {
         $id = $data->id + 1;
       }
-      $unique          = $id.="TEST";#$_POST['add-trip-title'];
+      $unique             = $id.="TEST";#$_POST['add-trip-title'];
       $unique_id          = base64_encode($unique);
-      #$owner              = base64_encode($_SESSION['username']);
+      #$owner             = base64_encode($_SESSION['username']);
       $data = array(
           'title'         => $_POST['add-trip-title']
         , 'description'   => $_POST['add-trip-description']
