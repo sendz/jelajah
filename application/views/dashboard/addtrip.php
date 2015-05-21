@@ -17,6 +17,13 @@
       ?>
       </div>
       <div class='input-field col s12 m6'>
+        <typeahead placeholder="test">
+          <ul>
+            <li ng-repeat="value in autocompleteValues">{{value}}</li>
+          </ul>
+        </typeahead>
+      </div>
+      <div class='input-field col s12 m6'>
       <?php
         echo form_label('Arrival','add-detail-arrival');
         $add_detail_arrival = array(

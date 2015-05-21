@@ -5,7 +5,7 @@
   if ($dashboard) {
     foreach ($dashboard as $data) {
       $json[$count]['id']           = $data->id;
-      $json[$count]['unique_id']       = $data->unique;
+      $json[$count]['unique_id']    = $data->unique;
       $json[$count]['title']        = $data->title;
       $json[$count]['description']  = $data->description;
       $count++;
