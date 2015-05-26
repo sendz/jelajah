@@ -9,25 +9,20 @@
         echo form_label('Departure','add-detail-departure');
         $add_detail_departure = array(
             'id'        => 'add-detail-departure'
+          , 'class'     => 'typeahead'
           , 'name'      => 'add-detail-departure'
           , 'type'      => 'text'
-          , 'ng-model'  => 'AirportKeyword'
+          //, 'ng-model'  => 'AirportKeyword'
         );
         echo form_input($add_detail_departure);
       ?>
-      </div>
-      <div class='input-field col s12 m6'>
-        <typeahead placeholder="test">
-          <ul>
-            <li ng-repeat="value in autocompleteValues">{{value}}</li>
-          </ul>
-        </typeahead>
       </div>
       <div class='input-field col s12 m6'>
       <?php
         echo form_label('Arrival','add-detail-arrival');
         $add_detail_arrival = array(
             'id'      => 'add-detail-arrival'
+          , 'class'   => 'typeahead'
           , 'name'    => 'add-detail-arrival'
           , 'type'    => 'text'
         );
@@ -88,11 +83,13 @@
     <div class="row">
       <div class="input-field col s12 m6">
       <?php
-        echo form_label('Carrier (Airline or Transporter Name)','add-detail-carrier');
+        #echo form_label('Carrier (Airline or Transporter Name)','add-detail-carrier');
         $add_detail_carrier = array(
             'id'      => 'add-detail-carrier'
           , 'name'    => 'add-detail-carrier'
           , 'type'    => 'text'
+          , 'class'   => 'airlinetypeahead'
+          , 'placeholder' => 'Carrier (Airline or Transporter Name)'
         );
         echo form_input($add_detail_carrier);
       ?>
@@ -118,6 +115,21 @@
         );
         echo form_input($add_detail_booking_code);
       ?>
+      </div>
+      <div class="input-field col s12">
+      <?php
+        echo form_label('Itinerary notes and description','add-detail-note');
+        $add_detail_note = array(
+            'id'      => 'add-detail-note'
+          , 'name'    => 'add-detail-note'
+          , 'class'   => 'materialize-textarea'
+        );
+        echo form_textarea($add_detail_note);
+      ?>
+      </div>
+      <div class="input-field col s12">
+        <button class="btn-flat waves-effect waves-light grey-text left" id="add-detail-cancel" name="add-detail-cancel" onClick="historyBack()">Cancel</button>
+        <button class="btn waves-effect waves-light right" id="add-detail-submit" name="add-detail-submit" type="submit">Save Itinerary</button>
       </div>
     </div>
     <?php

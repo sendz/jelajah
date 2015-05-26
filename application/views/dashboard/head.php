@@ -2,6 +2,7 @@
 <head>
 	<title>Jelajah - Your Dashboard</title>
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url() . 'uilibs/css/materialize.css'; ?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url() . 'uilibs/css/typeahead.css'; ?>">
 	<style type="text/css">
 		header, main, footer {
 			padding-left: 120px;

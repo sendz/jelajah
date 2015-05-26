@@ -23,6 +23,7 @@
     </div>
 	</div>
 </nav>
+<?php if ($this->uri->segment(3)!='add'): ?>
 <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
   <a <?php if ($link_active!='detail') echo "onClick='addTrip()'"; ?> class="btn-floating btn-large red">
     <i class="large mdi-content-add"></i>
@@ -37,3 +38,4 @@
   </ul>
   <?php endif; ?>
 </div>
+<?php endif; ?>

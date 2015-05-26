@@ -11,9 +11,9 @@
   /*
   * Controllers: getTrip of User's dashboard
   */
-  angular.module('jelajah',["typeahead"]);
+  //angular.module('jelajah',["typeahead"]);
   var getTrip = angular.module('jelajah', []);
-  var typeAhead = angular.module('jelajah', []);
+  //var typeAhead = angular.module('jelajah', []);
 
   // Trip List of Dashboard
   getTrip.controller('TripListController', function ($scope, $http) {
@@ -31,6 +31,8 @@
          });
   });
 
+
+/*
   // Search for Airport
   typeAhead.factory('dataFactory', function($http){
       return {
@@ -71,3 +73,4 @@
           templateUrl: 'templates/templateurl.html'
       };
   });
+*/

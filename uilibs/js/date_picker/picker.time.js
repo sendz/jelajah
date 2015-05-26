@@ -971,7 +971,7 @@ TimePicker.defaults = (function( prefix ) {
         format: 'h:i A',
 
         // The interval between each time
-        interval: 30,
+        interval: 5,
 
         // Picker close behavior
         closeOnSelect: true,
